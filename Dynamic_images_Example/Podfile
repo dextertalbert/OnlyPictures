@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'OnlyPictures_Example' do
   	pod 'OnlyPictures', :path => '../'
-	pod 'AlamofireImage', '~> 3.3'
+	pod 'AlamofireImage'
 	
   	target 'OnlyPictures_Tests' do
     		inherit! :search_paths

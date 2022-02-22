@@ -171,7 +171,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				18D176F4DC3EEF3EC4B23F82 /* [CP] Embed Pods Frameworks */,
-				E206C81DB35C19B313D590E9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,8 +189,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				15C0F4CC17F07177ED48D8FF /* [CP] Embed Pods Frameworks */,
-				872F0A2812F4BCA818FE4E9F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,28 +262,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15C0F4CC17F07177ED48D8FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlyPictures_Tests/Pods-OnlyPictures_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		18D176F4DC3EEF3EC4B23F82 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OnlyPictures_Example/Pods-OnlyPictures_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OnlyPictures_Example/Pods-OnlyPictures_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/OnlyPictures/OnlyPictures.framework",
@@ -299,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlyPictures_Example/Pods-OnlyPictures_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlyPictures_Example/Pods-OnlyPictures_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A2D2275C5D3680F830F052C /* [CP] Check Pods Manifest.lock */ = {
@@ -318,36 +300,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		872F0A2812F4BCA818FE4E9F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlyPictures_Tests/Pods-OnlyPictures_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E206C81DB35C19B313D590E9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnlyPictures_Example/Pods-OnlyPictures_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F06E6ABFB7F87C2674A2C946 /* [CP] Check Pods Manifest.lock */ = {
