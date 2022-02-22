@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OnlyPictures'
-  s.version          = '1.0.0'
+  s.version          = '1.1.3'
   s.summary          = 'Flexible circular pictures with overlapping feature'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
