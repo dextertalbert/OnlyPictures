@@ -138,8 +138,11 @@ public class OnlyPictures: UIView {
             }
         }
     }
-    
-    
+    public var countButtonWidth: CGFloat = 22.0 {
+        didSet {
+            self.countButtonWidth = countButtonWidth
+        }
+    }
     
     
     // Order -----------------------------------------------------------
@@ -643,7 +646,7 @@ extension OnlyPictures {
             self.buttonCount?.setTitle("", for: .normal)
             self.buttonCount?.setImage(image, for: .normal)
             self.buttonCount?.backgroundColor = .white
-            self.buttonCount?.widthAnchor.constraint(equalToConstant: SIZE_OF_IMAGEVIEWS).isActive = true  // We have remove width, if there is image to show, set default width to count circle.
+            self.buttonCount?.widthAnchor.constraint(equalToConstant: countButtonWidth).isActive = true  // We have remove width, if there is image to show, set default width to count circle.
 
         }else{
             self.buttonCount?.titleLabel?.font = self.fontForCount
@@ -658,7 +661,7 @@ extension OnlyPictures {
             self.buttonCount?.setTitleColor(self.textColorForCount, for: .normal)
         }
         
-        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: self.calculatedWidthOfCount, borderColor: self.spacingColor, borderWidth: CGFloat(CGFloat(IMAGEVIEW_BORDERWIDTH)))
+        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: countButtonWidth, borderColor: self.spacingColor, borderWidth: CGFloat(CGFloat(IMAGEVIEW_BORDERWIDTH)))
     }
 }
 
@@ -698,7 +701,7 @@ internal extension OnlyPictures {
         for imageView in listPictureImageViews {
             imageView.makeBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, borderColor: self.spacingColor, borderWidth: CGFloat(width))
         }
-        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: self.calculatedWidthOfCount, borderColor: self.spacingColor, borderWidth: CGFloat(width))   // If button will be there, if will apply border width to it.
+        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: self.countButtonWidth, borderColor: self.spacingColor, borderWidth: CGFloat(width))   // If button will be there, if will apply border width to it.
     }
 }
 
