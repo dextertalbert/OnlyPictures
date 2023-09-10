@@ -541,7 +541,7 @@ internal extension OnlyPictures {
         
         buttonRemainingCount.heightAnchor.constraint(equalToConstant: SIZE_OF_IMAGEVIEWS).isActive = true
         self.calculatedWidthOfCount = SIZE_OF_IMAGEVIEWS    // default width of count.
-        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: SIZE_OF_IMAGEVIEWS, borderColor: self.spacingColor, borderWidth: CGFloat(CGFloat(IMAGEVIEW_BORDERWIDTH)))
+        self.buttonCount?.makeCountBorderWithCornerRadius(radius: SIZE_OF_IMAGEVIEWS/2, countWidth: countButtonWidth, borderColor: self.spacingColor, borderWidth: CGFloat(CGFloat(IMAGEVIEW_BORDERWIDTH)))
         
         buttonRemainingCount.addTarget(self, action: #selector(self.tapActionListenerOfCount(sender:)), for: .touchUpInside)
         
@@ -650,7 +650,7 @@ extension OnlyPictures {
             self.buttonCount?.setTitle(countForCountCircle, for: .normal)
             let width = countForCountCircle.width(withConstrainedHeight: SIZE_OF_IMAGEVIEWS, font: self.fontForCount)
             self.calculatedWidthOfCount = (width+24)>SIZE_OF_IMAGEVIEWS ? (width+24) : SIZE_OF_IMAGEVIEWS
-            self.buttonCount?.widthAnchor.constraint(equalToConstant: self.calculatedWidthOfCount).isActive = true
+            self.buttonCount?.widthAnchor.constraint(equalToConstant: self.countButtonWidth).isActive = true
 
             // custom colors if developer set for count circle.
             self.buttonCount?.backgroundColor = self.backgroundColorForCount
