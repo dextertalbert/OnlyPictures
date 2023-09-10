@@ -138,11 +138,7 @@ public class OnlyPictures: UIView {
             }
         }
     }
-    public var countButtonWidth: CGFloat = 22.0 {
-        didSet {
-            self.countButtonWidth = countButtonWidth
-        }
-    }
+    public var countButtonWidth: CGFloat = 22.0
     
     
     // Order -----------------------------------------------------------
